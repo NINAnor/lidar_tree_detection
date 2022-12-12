@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # ---------------------------------------------------------------------------
-# perform_tree_detection.py
+# perform_tree_detection_v2.py
 # Description: Translation of Hanssen et al. (2021) tree detection algorithm
-# from ArcMap model builder to ArcPy script
+# from ArcMap model builder to ArcPy script - Version 2
 # Author: Zofie Cimburova
 # ---------------------------------------------------------------------------
 
@@ -54,7 +54,7 @@ env.workspace = r"P:\15220700_gis_samordning_2022_(marea_spare_ecogaps)\Zofie\sy
 # ------------------------------------------------------ #
 path_bydel = "neighbourhoods.gdb\\" # IF NECESSARY, CHANGE PATH TO GEODATABASE STORING NEIGHBOURHOOD POLYGONS
 path_output = "trees_v2.gdb\\" # IF NECESSARY, CHANGE PATH TO GEODATABASE STORING OUTPUT DATA
-r_chm = r"P:\15220700_gis_samordning_2022_(marea_spare_ecogaps)\Zofie\synergi_3_tree_accounts\DATA\Oslotraer_Laserdata_2021\Oslotraer_Laserdata_2021.gdb\Trehoyde_over2m" # IF NECESSARY, CHANGE PATH TO DATASET STORING CANOPY HEIGHT MODEL
+r_chm = r"pbe_chm_2021.gdb\Trehoyde_over2m" # IF NECESSARY, CHANGE PATH TO DATASET STORING CANOPY HEIGHT MODEL
 v_water = r"R:\GeoSpatialData\Topography\Norway_FKB\Original\FKB-Vann FGDB-format\Basisdata_0000_Norge_5973_FKB-Vann_FGDB\Basisdata_0000_Norge_5973_FKB-Vann_FGDB.gdb\fkb_vann_omrade" # IF NECESSARY, CHANGE PATH TO DATASET STORING WATER POLYGONS
 
 
