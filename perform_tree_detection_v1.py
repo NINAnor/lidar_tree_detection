@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # ---------------------------------------------------------------------------
-# perform_tree_detection.py
+# perform_tree_detection_v1.py
 # Description: Translation of Hanssen et al. (2021) tree detection algorithm
-# from ArcMap model builder to ArcPy script
+# from ArcMap model builder to ArcPy script - Version 1
 # Author: Zofie Cimburova
 # ---------------------------------------------------------------------------
 
@@ -52,7 +52,7 @@ env.workspace = r"P:\15220700_gis_samordning_2022_(marea_spare_ecogaps)\Zofie\sy
 # ------------------------------------------------------ #
 # Inputs
 # ------------------------------------------------------ #
-path_bydel = "bydel.gdb\\" # IF NECESSARY, CHANGE PATH TO GEODATABASE STORING NEIGHBOURHOOD POLYGONS
+path_bydel = "neighbourhoods.gdb\\" # IF NECESSARY, CHANGE PATH TO GEODATABASE STORING NEIGHBOURHOOD POLYGONS
 path_output = "data.gdb\\" # IF NECESSARY, CHANGE PATH TO GEODATABASE STORING OUTPUT DATA
 v_buildings = r"R:\GeoSpatialData\Topography\Norway_FKB\Original\FKB-Bygning FGDB-format\Basisdata_03_Oslo_5972_FKB-Bygning_FGDB\Basisdata_03_Oslo_5972_FKB-Bygning_FGDB.gdb\fkb_bygning_omrade" # IF NECESSARY, CHANGE PATH TO DATASET STORING BUILDING POLYGONS
 v_water = r"R:\GeoSpatialData\Topography\Norway_FKB\Original\FKB-Vann FGDB-format\Basisdata_0000_Norge_5973_FKB-Vann_FGDB\Basisdata_0000_Norge_5973_FKB-Vann_FGDB.gdb\fkb_vann_omrade" # IF NECESSARY, CHANGE PATH TO DATASET STORING WATER POLYGONS
@@ -74,7 +74,7 @@ for i in range (1, 17): # IF NECESSARY, CHANGE NUMBER OF BYDEL
     arcpy.AddMessage("  ---------------------".format(bydel_code))
    
     v_bydel = path_bydel + "\\b_" + bydel_code
-    l_las_folder = r"{}".format(bydel_code) # IF NECESSARY, CHANGE PATH TO .las FILES
+    l_las_folder = r"lidar\{}".format(bydel_code) # IF NECESSARY, CHANGE PATH TO .las FILES
     
     # ------------------------------------------------------ #
     # 1.1 Create LAS Dataset
